@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="myApp">
+	<head>
+		<title>Fibonacci sequence</title>
+		<meta charset="utf-8">
+	</head>
+	<body ng-controller="myController">		
+		<div ng-cloak>
+			<input type="text" ng-model="number">
+			<input type="submit" ng-click="calculateSeq(number)">
+			<p> Value: {{enteredNumber}}</p>		
+			<p ng-if="array">The Fibonacci sequence is : <span ng-bind="array"></span> </p>	
+			<button ng-disabled="! array" ng-click="shuffle(array)">Shuffle the Sequence !</button><br><br>
+			<span ng-show = "shuffledArray">Shuffled sequence is : {{shuffledArray}}</span>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>	
+		<script src="/public/controller.js"></script> 		
+	</body>
+</html>
