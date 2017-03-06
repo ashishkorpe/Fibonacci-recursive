@@ -40,8 +40,8 @@ var fiboSeries = function(number,next){// function to calculate fibonacci series
 
 server.method('fibonacci',fibonacci,{
 	cache:{
-		expiresIn:300,// check caching 
-		generateTimeout: 100
+		expiresIn:3000,// check caching 
+		generateTimeout: 1000
 	}
 });
 
